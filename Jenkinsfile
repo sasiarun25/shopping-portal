@@ -6,24 +6,24 @@ pipeline{
     tools{
        nodejs 'nodejs' 
     }
-*/    
+    
 
     stages{
-        stage('Build'){
+        stage('build'){
             steps{
-                echo 'this is the Build job'
+                echo 'this is the build job'
                 sh 'npm install'
             }
         }
-        stage('Test'){
+        stage('test'){
             steps{
-                echo 'this is the Test job'
-                sh 'npm Test'
+                echo 'this is the test job'
+                sh 'npm test'
             }
         }
-        stage('Package'){
+        stage('package'){
             steps{
-                echo 'this is the Package job'
+                echo 'this is the package job'
                 sh 'npm run package'
             }
         }
